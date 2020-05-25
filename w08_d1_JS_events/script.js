@@ -97,3 +97,22 @@ la dernière card (en bas à droite) va passer en premier (en haut à gauche). O
 
 };
 
+//Fonctionnalité 8 :
+/*Évidemment tu t'y attendais : on va faire tourner les card dans l'autre sens aussi.
+Donc si un utilisateur clique sur le bouton bleu <==, la première card devra passer en dernier.*/
+
+{
+  let blueBtn = document.getElementsByClassName('btn btn-primary my-2')[0];
+  
+  blueBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    let allCards = document.querySelectorAll(".col-md-4");
+    let parent = allCards[0].parentNode;
+    let lastCard = allCards[5];
+    let nextSibling = lastCard.nextSibling;
+
+    //parentElement.insertBefore(newElement, theFirstChild);
+    parent.insertBefore(allCards[0], nextSibling);
+  });
+
+};
