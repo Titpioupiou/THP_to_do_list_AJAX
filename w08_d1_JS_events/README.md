@@ -20,6 +20,6 @@ Le script.js contient le code pour cet exercice
 
 ### Commentaires
 
-Pour l'instant, toutes les fonctionnalités sont ajoutées jusqu'à la 4ème.
+Toutes les fonctionnalités sont présentes :)
 
 **Merci d'avance pour la correction :)**
