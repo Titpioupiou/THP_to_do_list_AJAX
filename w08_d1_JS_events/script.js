@@ -33,4 +33,16 @@ secondEditBtn.addEventListener('click', function() {
   };
 });
 
-//Fonctionnalité 5 : 
+//Fonctionnalité 5 : Faire disparaitre Bootstrap en double-cliquant sur la navbar
+let navbar = document.getElementsByClassName('navbar')[0];
+let bootstrapLink = document.getElementsByTagName('link')[0];
+navbar.addEventListener('dblclick', function() {
+  if (bootstrapLink.classList.value === 'disabled') {
+    bootstrapLink.disabled = false;
+    bootstrapLink.setAttribute('class', '');
+  } else {
+    bootstrapLink.disabled = true;
+    bootstrapLink.classList.add('disabled');
+  };
+});
+
