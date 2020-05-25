@@ -18,18 +18,18 @@ menuBtn[0].addEventListener('click', function(){
 let firstCard = document.getElementsByClassName('card')[0];
 let firstEditBtn = firstCard.getElementsByTagName('button')[1];
 firstEditBtn.addEventListener('click', function() {
-  firstEditBtn.style.color = 'red'
+  firstCard.style.color = 'red'
 });
 
 //Fonctionnalité 4 : texte vert Btn Edit Second Card - change à chaque clic
 let secondCard = document.getElementsByClassName('card')[1];
 let secondEditBtn = secondCard.getElementsByTagName('button')[1];
 secondEditBtn.addEventListener('click', function() {
-  if (secondEditBtn.style.color === 'green') {
-    secondEditBtn.style.color = '';
+  if (secondCard.style.color === 'green') {
+    secondCard.style.color = '';
   }
-  else if (secondEditBtn.style.color === '') {
-  secondEditBtn.style.color = 'green';
+  else if (secondCard.style.color === '') {
+    secondCard.style.color = 'green';
   };
 });
 
