@@ -88,7 +88,7 @@ la dernière card (en bas à droite) va passer en premier (en haut à gauche). O
   let greyBtn = document.getElementsByClassName('btn btn-secondary my-2')[0];
 
   greyBtn.addEventListener('click', function() {
-    let allCards = document.querySelectorAll(".col-md-4");
+    let allCards = document.querySelectorAll('.col-md-4');
     let parent = allCards[0].parentNode;
 
     //parentElement.insertBefore(newElement, theFirstChild);
@@ -106,7 +106,7 @@ Donc si un utilisateur clique sur le bouton bleu <==, la première card devra pa
   
   blueBtn.addEventListener('click', function(e) {
     e.preventDefault();
-    let allCards = document.querySelectorAll(".col-md-4");
+    let allCards = document.querySelectorAll('.col-md-4');
     let parent = allCards[0].parentNode;
     let lastCard = allCards[5];
     let nextSibling = lastCard.nextSibling;
@@ -115,4 +115,36 @@ Donc si un utilisateur clique sur le bouton bleu <==, la première card devra pa
     parent.insertBefore(allCards[0], nextSibling);
   });
 
+};
+
+//Fonctionnalité 9 :
+/*- La fonctionnalité se déclenchera si le logo de la page (JS & Events) est sélectionné et qu'on appuie sur une touche spécifique du clavier.
+- Si l'utilisateur presse la touche "a", l'ensemble de la page va être condensé sur 4 colonnes Bootstrap à gauche de l'écran.
+- Si l'utilisateur presse la touche "y", l'ensemble de la page va être condensé sur 4 colonnes Bootstrap au milieu de l'écran.
+- Si l'utilisateur presse la touche "p", l'ensemble de la page va être condensé sur 4 colonnes Bootstrap à droite de l'écran.
+- Si l'utilisateur presse la touche "b", tout redevient normal.*/
+
+{
+  let jsBtn = document.getElementsByClassName('navbar-brand')[0];
+  
+  jsBtn.addEventListener('keypress', function() {
+    let key = event.key;
+    let body = document.getElementsByTagName('body')[0];
+
+    if (key === 'a' || key === 'A') {
+      body.classList = '';
+      body.classList.add('col-4');
+    }
+    else if (key === 'y'|| key === 'Y') {
+      body.classList = '';
+      body.classList.add('col-4', 'offset-md-4');
+    }
+    else if (key === 'p'|| key === 'P') {
+      body.classList = '';
+      body.classList.add('col-4', 'offset-md-8');
+    }
+    else if (key === 'b'|| key === 'B') {
+      body.classList = '';
+    };    
+  });
 };
