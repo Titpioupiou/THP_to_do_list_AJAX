@@ -14,11 +14,23 @@ menuBtn[0].addEventListener('click', function(){
     hamburgerMenu.classList.toggle('collapse');
 });
 
-// Fonctionnalité 3 : texte rouge bouton Edit First Card
+// Fonctionnalité 3 : texte rouge bouton Edit First Card définitif suaf si on charge la page
 let firstCard = document.getElementsByClassName('card')[0];
-let editBtn = firstCard.getElementsByTagName('button')[1];
-editBtn.addEventListener('click', function() {
-  editBtn.style.color = 'red'
+let firstEditBtn = firstCard.getElementsByTagName('button')[1];
+firstEditBtn.addEventListener('click', function() {
+  firstEditBtn.style.color = 'red'
 });
 
-//Fonctionnalité 4 : 
+//Fonctionnalité 4 : texte vert Btn Edit Second Card - change à chaque clic
+let secondCard = document.getElementsByClassName('card')[1];
+let secondEditBtn = secondCard.getElementsByTagName('button')[1];
+secondEditBtn.addEventListener('click', function() {
+  if (secondEditBtn.style.color === 'green') {
+    secondEditBtn.style.color = '';
+  }
+  else if (secondEditBtn.style.color === '') {
+  secondEditBtn.style.color = 'green';
+  };
+});
+
+//Fonctionnalité 5 : 
