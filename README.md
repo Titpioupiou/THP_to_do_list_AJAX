@@ -1,24 +1,23 @@
-# README
+# Bienvenue dans ce projet THP : Gmail-like en AJAX
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+*Projet réalisé par Aurore CARRIERE - le 28/05/2020*
 
-Things you may want to cover:
+***********************
 
-* Ruby version
+### Exercice :
 
-* System dependencies
+Pour ce projet, nous allons te demander de faire un Email Viewer qui n'est ni plus ni moins qu'une version ultra basique de Gmail. Globalement l'appli affichera une seule et unique page avec 2 colonnes :
 
-* Configuration
+Une colonne contenant la liste des emails en base ;
+Une colonne affichant le contenu de l'email sur lequel l'utilisateur vient de cliquer.
 
-* Database creation
+### Comment lancer l'application ?
 
-* Database initialization
+C'est simple ne t'en fais pas !!
+Il suffit d'ouvrir le lien Heroku suivant :
 
-* How to run the test suite
+https://to-do-list-ajax-titpioupiou.herokuapp.com/
 
-* Services (job queues, cache servers, search engines, etc.)
+### Commentaires
 
-* Deployment instructions
-
-* ...
+RAS

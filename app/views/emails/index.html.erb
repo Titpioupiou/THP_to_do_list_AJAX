@@ -1,0 +1,38 @@
+<div class="container">
+  <h1 class="text-center text-secondary"><i class="fab fa-mailchimp"></i> Ta super boîte mail trop géniale !!</h1>
+
+  <hr>
+  <p class="text-center">
+    <%= link_to "Recevoir un email", emails_path, { :method => :post, :remote => true, class: 'btn btn-outline-warning' } %>
+  </p>
+
+  <div class="row">
+  <div class="col-4">
+    <table class="table">
+      <thead class="thead-info">
+      </thead>
+      <tbody id="mail_list" class="list-group">  
+      <b class="list-group-item text-white bg-info">Liste des emails</b>
+          <% @emails.order(:created_at).each do |email| %>
+          <tr>
+          <%= link_to "#{email.object}", email_path(id: email.id, read: true), { :remote => true, class: "list-group-item list-group-item-action list-group-item-info font-weight-bold font-italic #{email.object}" } %>
+
+          </tr>
+          <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-8">
+    <table class="table">
+      <thead class="thead text-white bg-info ">
+        <tr>
+          <th scope="col" class='text-center'>Email sélectionné</th>
+        </tr>
+      </thead>
+      <tbody id="content">
+
+      </tbody>
+    </table>
+  </div>
+</div>   
+</div>
