@@ -1,6 +1,7 @@
 # Bienvenue dans ce projet THP : Gmail-like en AJAX
 
 *Projet réalisé par Aurore CARRIERE - le 28/05/2020*
+
 Dans le cadre de la formation The Hacking Project (ou THP pour les intimes)
 
 ***********************
